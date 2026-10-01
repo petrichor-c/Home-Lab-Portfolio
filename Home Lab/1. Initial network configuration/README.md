@@ -1,4 +1,4 @@
-# Private Sub-net for Home Lab 
+# Private subnet for Home Lab 
 
 I have been reading a lot of literature and content on home labs and self-hosting. I find that it would make for a fantastic environment to try tools and applications. To break things, and then fix them. A sandbox for me to learn and experiment as much as I want.
 
