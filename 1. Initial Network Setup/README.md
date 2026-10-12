@@ -48,4 +48,6 @@ Used the console to double-check and ensure that not only do the corresponding p
 
 <img width="668" height="383" alt="checking_isolated_VLAN" src="https://github.com/user-attachments/assets/bb475017-802a-4697-bdd3-c85b58878916" />
 
+Up next: setting up the mini-PC as a Proxmox VE server
 
+Thank you for reading! 😁
