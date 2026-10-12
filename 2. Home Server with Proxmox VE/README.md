@@ -26,7 +26,7 @@ We've got Proxmox running on the machine. I could stop here and proceed with spi
 
 However, as I read through the documentation, as well as third-party tutorials, I saw it fit to perform a few maintenance steps, simply to make my life easier in the future. This meant ensuring that my system auto-updates, and that it sticks with the non-subscription environment. 
 
-Proxmox VE is a software product that comes in a few flavors, mainly Enterprise, Non-Subscription, and Test. Proxmox VE is automatically configured for the Enterprise configuration. However, this is a heavy-duty version of Proxmox; it is severe overkill for my intended purposes, on top of requiring a subscription to have full utilization of the system.
+Proxmox VE is a software product that comes in a few flavors, mainly Enterprise, Non-Subscription, and Test. Proxmox VE is automatically configured with the Enterprise settings. This is a heavy-duty version of Proxmox; it is severe overkill for my intended purposes, on top of requiring a subscription to have full utilization of the system.
 
 Therefore, I will switch my installation to using the Non-Subscription repository. This is the free version of the main Enterprise build, meaning I will be receiving updates that may not be fully tested for stability. However, given that this machine is being used in learning environment, I think dealing with the prospect of maybe some tools breaking in an update is a very small price to pay for such a powerful platform. 
 
