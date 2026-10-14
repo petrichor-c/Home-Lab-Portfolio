@@ -48,6 +48,17 @@ The breakdown for this command is as follows:
 - `--onboot 1` set the container to boot when the host system boots
 - `--start 1` start the container right after it is created
 
-Running the command, waiting for a few seconds, and we observe that the container for Debian 13 standard is up and online
+Run the command, and wait for the container to build and boot up. After a moment, we observe that the container for Debian 13 standard is up and online
 
 <img width="1918" height="889" alt="image" src="https://github.com/user-attachments/assets/2f75cce6-1fdb-42d6-a641-eaccbe92517f" />
+
+
+Right away, run `apt update && apt upgrade -y` to ensure our container is up-to-date:
+<img width="1918" height="894" alt="image" src="https://github.com/user-attachments/assets/a73dd38d-7d97-48b8-90a0-93fbb6ffaaf5" />
+
+Then, install some fundamentals tools needed for the Pi-hole installer:
+<img width="1375" height="670" alt="image" src="https://github.com/user-attachments/assets/a4abafa0-3641-4b3f-b8a7-2281472b8395" />
+
+Run the Pi-hole installer script, and take note of the admin credentials:
+<img width="1920" height="835" alt="pihole-installation-screen" src="https://github.com/user-attachments/assets/8b6de158-36d9-4a6b-b532-324edc59c0e0" />
+
