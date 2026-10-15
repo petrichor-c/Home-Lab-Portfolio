@@ -62,3 +62,9 @@ Then, install some fundamentals tools needed for the Pi-hole installer:
 Run the Pi-hole installer script, and take note of the admin credentials:
 <img width="1920" height="835" alt="pihole-installation-screen" src="https://github.com/user-attachments/assets/8b6de158-36d9-4a6b-b532-324edc59c0e0" />
 
+Now, set the VLAN's primary DNS to point to our Pi-hole instance. Restart the hosts so they adopt the new DNS, and login to the Pi-hole portal:
+<img width="1915" height="984" alt="image" src="https://github.com/user-attachments/assets/16e86bfc-2984-4fa2-9062-bcb41a6e9a73" />
+
+Additionally, we can double-check that Pi-hole is being used as our primary DNS by using `nslookup`:
+<img width="1348" height="763" alt="image" src="https://github.com/user-attachments/assets/16825e59-8efd-46bd-be2d-668f9a7efffe" />
+
