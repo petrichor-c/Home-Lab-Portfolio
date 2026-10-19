@@ -68,3 +68,25 @@ Now, set the VLAN's primary DNS to point to our Pi-hole instance. Restart the ho
 Additionally, we can double-check that Pi-hole is being used as our primary DNS by using `nslookup`:
 <img width="1348" height="763" alt="image" src="https://github.com/user-attachments/assets/16825e59-8efd-46bd-be2d-668f9a7efffe" />
 
+Checking ISP is not preventing communication to root server:
+<img width="1539" height="676" alt="image" src="https://github.com/user-attachments/assets/4efd4ad9-b373-44f3-9286-0128c679d238" />
+
+<img width="993" height="646" alt="image" src="https://github.com/user-attachments/assets/a711f07a-bbde-4730-82a4-51bf68914820" />
+
+
+Install "unbound"
+<img width="1407" height="670" alt="image" src="https://github.com/user-attachments/assets/794b1c2c-2761-4ef9-b6bc-37bbd4556d0d" />
+
+Use `nano` to create and setup the pi-hole.conf file
+<img width="1551" height="670" alt="image" src="https://github.com/user-attachments/assets/80dc89dc-193f-42d3-92e0-8a3ed6743bb9" />
+
+Check that unbound is up and running properly
+<img width="1546" height="679" alt="image" src="https://github.com/user-attachments/assets/bff4735c-b498-4c08-84a3-75edcdda6741" />
+
+
+Add our recursive DNS as the designated upstream DNS server for the pi-hole instance:
+<img width="1594" height="922" alt="image" src="https://github.com/user-attachments/assets/acdfa33c-f1b4-4612-a8ad-c0fbd56ead1a" />
+
+Double-check my work by checking DNS queries are still being processed properly
+<img width="1912" height="949" alt="image" src="https://github.com/user-attachments/assets/b8ea6fca-c1a7-44a6-a57f-8f9bfb00f616" />
+<img width="1914" height="955" alt="image" src="https://github.com/user-attachments/assets/8cd41f32-4f51-4974-b073-3683211955f9" />
