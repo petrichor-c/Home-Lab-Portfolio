@@ -37,10 +37,10 @@ Turned out to be just some formatting error in the spaces:
 Once the syntax error is fixed, try running the playbook:
 <img width="1731" height="409" alt="image" src="https://github.com/user-attachments/assets/e86c8e25-2510-477f-a82f-57ed19be4388" />
 
-Got an authentication error. After double-checking the `ssh` configuration for both worker VMs, I checked if `sudo` is configured properly. After some research and a lot of hair pulling, I discovered that my OS of choice (Ubuntu Server) uses `sudo` version `sudo-rs`, which is incompatible with Ansible due to the way authentication credentials are wrapped. This was fixed by going back to the .init file and adding a new field to the `[web:vars]` field
+Got an authentication error. After double-checking the `ssh` configuration for both worker VMs, I checked if `sudo` is configured properly. After some research and a lot of hair pulling, I discovered that my OS of choice (Ubuntu Server) uses `sudo` version `sudo-rs`, an implementation of `sudo` made in Rust, which is has become the default `sudo` implementation for Ubuntu since version 25.10. It is a re-implementation made to reduce exposure to classes of memory-safety errors. `sudo-rs` handles authentication prompts differently from the usual `sudo`, hence why it is incompatible with Ansible. This was fixed by going back to the .init file and adding a new field to the `[web:vars]` field, forcing the hosts to use the legacy version of `sudo`:
 <img width="418" height="241" alt="image" src="https://github.com/user-attachments/assets/22f09177-41fa-4ed8-93dd-eeb1f4e07087" />
 
-After going in and forcing the playbook to use traditional `sudo` for authentication, the playbook ran successfully and provided the requested info from both worker hosts:
+After going in and forcing the playbook to use traditional `sudo` for authentication, the playbook ran successfully and provided the requested info from both managed hosts:
 <img width="1726" height="1078" alt="image" src="https://github.com/user-attachments/assets/989f7b76-0620-4612-a8ac-90d444a38949" />
 
 Double-check that both worker VMs work as intended by entering their addresses in a web browser, and see if we get the correct web pages:
