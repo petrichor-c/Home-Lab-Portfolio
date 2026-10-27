@@ -88,11 +88,31 @@ I then changed the execution policy to allow scripts to run for my user:
 Re-try running the script from my PowerShell terminal:
 <img width="1105" height="493" alt="image" src="https://github.com/user-attachments/assets/ccb9d460-14ce-4b76-b2fe-0df0597442f1" />
 <img width="1918" height="873" alt="image" src="https://github.com/user-attachments/assets/9bbcfbce-accf-4427-a084-33c064fdab69" />
+<img width="1911" height="465" alt="image" src="https://github.com/user-attachments/assets/91d096ae-d292-4eee-b619-3dddc2886f19" />
 
 Everything is running perfectly!
 
 Now, to take it a step further: adding Identity Access Management
-<img width="1911" height="465" alt="image" src="https://github.com/user-attachments/assets/91d096ae-d292-4eee-b619-3dddc2886f19" />
 
+I will have two roles: one admin, and one viewer.
 
+Generate the admin SSH key:
+<img width="976" height="507" alt="image" src="https://github.com/user-attachments/assets/fcab27a0-4a51-4c8c-b713-f55ce2c16cf2" />
 
+Generate the viewer SSH key:
+<img width="1056" height="460" alt="image" src="https://github.com/user-attachments/assets/2dd735dc-ceb5-47ba-8234-056aa269e2d7" />
+
+Take note of the public keys, as they will be needing for the Ansible configuration:
+<img width="1042" height="117" alt="image" src="https://github.com/user-attachments/assets/659ec989-1124-47a7-bd62-57c96127a325" />
+
+create the IAM .yml file:
+<img width="1101" height="234" alt="image" src="https://github.com/user-attachments/assets/29d8b9e2-1686-4dcb-9b8c-42a7897a3bf2" />
+
+Create the password hashes to store in the Ansible vault:
+<img width="1278" height="307" alt="image" src="https://github.com/user-attachments/assets/ccbf9380-1104-4bb1-b705-b841049601a4" />
+
+Create the .yml file with the password hashes and encrypt it:
+<img width="1221" height="342" alt="image" src="https://github.com/user-attachments/assets/1d40af76-bbd0-44ee-aa9a-85d73f1498d7" />
+
+Run the `iam.yml` file:
+<img width="1252" height="1078" alt="image" src="https://github.com/user-attachments/assets/b9b1a9a3-fb12-4df0-b99a-298a586b180e" />
